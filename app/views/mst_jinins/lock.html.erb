@@ -1,0 +1,91 @@
+<div id="wrapper">
+<div id="warp-top">
+<header>
+<hgroup>
+<h1>XXXXXX 人員マスタ照会</h1></ br>
+</hgroup>
+<nav id="nav_top" class="clearfix">
+<div id="divnavi">
+<%= link_to '編集', edit_mst_jinin_path(@mst_jinin) %> | 
+<%= link_to '戻る', mst_jinins_path %>
+</div>
+</header><div id="content">
+	<div id="main">
+		<div id="container">
+			<section id="column1">
+				<section>
+					
+  </br>
+  <p id="notice">他者が更新中！！！</p>
+  <p class="round">人員ID：<span style="background-color: #d1e8ff"><%= @mst_jinin.id %></p>
+  <div id="divtableShow">
+  	<div class="rowShow">
+  		<div class="u1"></br>人員名称</div>
+  		<div class="u2">姓</br><%= @mst_jinin.name_sei %></div>
+  		<div class="u2">名</br><%= @mst_jinin.neme_mei %></div>
+  		<div class="u2">　　　　　</div>
+  		<div class="u2"></br>権限レベル　　</div>
+  		<div class="u2"></br><%= @mst_jinin.authoritylevel  %></div>
+  	</div>
+   	<div class="rowShow">
+  		<div class="u1">人員名称（カナ）</div>
+  		<div class="u2"><%= @mst_jinin.kana_sei %></div>
+  		<div class="u2"><%= @mst_jinin.kana_mei %></div>
+  		<div class="u2"></div>
+  		<div class="u2">打刻忘れ通知</div>
+  		<div class="u2"><%= @mst_jinin.punchnotify %></div>
+  	</div>
+   	<div class="rowShow">
+  		<div class="u1">連絡先1</div>
+  		<div class="u2"><%= @mst_jinin.contact1 %></div>
+   		<div class="u2"></div>
+   		<div class="u2"></div>
+  		<div class="u2">災害エリアメール送信</div>
+  		<div class="u2"><%= @mst_jinin.sendareamail %></div>
+  	</div>
+   	<div class="rowShow">
+  		<div class="u1">連絡先2</div>
+  		<div class="u2"><%= @mst_jinin.contact2 %></div>
+   		<div class="u2"></div>
+   		<div class="u2"></div>
+  		<div class="u2"></div>
+  		<div class="u2"></div>
+  	</div>  	
+   	<div class="rowShow">
+  		<div class="u1">連絡先3</div>
+  		<div class="u2"><%= @mst_jinin.contact3 %></div>
+  	</div>
+   	<div class="rowShow">
+  		<div class="u1">メールアドレス1</div>
+  		<div class="u2"><%= @mst_jinin.mailaddress1 %></div>
+  	</div>
+   	<div class="rowShow">
+  		<div class="u1">メールアドレス2</div>
+  		<div class="u2"><%= @mst_jinin.mailaddress2 %></div>
+  	</div>
+   	<div class="rowShow">
+  		<div class="u1">メールアドレス3</div>
+  		<div class="u2"><%= @mst_jinin.mailaddress3 %></div>
+  	</div>
+   	<div class="rowShow">
+  		<div class="u1">パスワード</div>
+  		<div class="u2"><%= @mst_jinin.password %></div>
+  	</div> 	
+</div>
+
+</section>
+<!--#column1--></section>
+<!--#container--></div>
+
+<!--#content--></div>
+						
+<!--#warp-top--></div>
+
+
+<div id="wrap-btm">
+	<footer>
+		<div class="copyright">&copy;2012 Angle. - Ruby on Rails Demonstration -<!--.copyright--></div>
+	</footer>
+<!--#wrap-btm--></div>
+<!--wrapper--></div>
+<br />

@@ -1,0 +1,398 @@
+// Place all the styles related to the mst_jinins controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*--------------------------------------------------------------------
+Base
+--------------------------------------------------------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  color: #333333;
+  font-size: 75%;
+  font-weight: normal;
+  line-height: 1.5;
+  font-family: "�q���M�m�p�S Pro W3","Hiragino Kaku Gothic Pro","���C���I",Meiryo,"�l�r �o�S�V�b�N","MS PGothic",sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  border: none;
+}
+
+html {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+a,
+a:link {
+  color: #333333;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #333333;
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  color: #777777;
+  text-decoration: none;
+}
+
+a:focus {
+  outline: none;
+}
+
+/* ----
+  div で作成するテーブル（編集用）
+  ----- */
+#divtable{
+  display:table;
+}
+.row{
+  display:table-row;
+}
+.row>div{
+  display:table-cell;
+  margin:8px;
+  padding:8px;
+  border:0px solid;
+  //background-color:#ffffff;
+}
+
+/* ----
+  div で作成するテーブル（照会用）
+  ----- */
+#divtableShow{
+  display:table;
+}
+.rowShow{
+  display:table-row;
+}
+.rowShow>div{
+  display:table-cell;
+  margin:8px;
+  padding:12px;
+  border:0px solid;
+  //background-color:#eef7ff;
+}
+
+/*
+ * div右寄せ
+ */
+.right{
+  margin:8px;
+  padding:8px;
+  text-align:right;
+}
+
+/*
+ * div navi
+ */
+div#divnavi{
+  margin: 0px;
+  padding: 1px;
+  text-align:right;
+  border-top:1px #ffeeaa solid;
+  border-bottom:1px #ffeeaa solid;
+  background-color:rgba(255,255,255,0.7);
+}
+
+/*
+ 角丸枠線
+ */
+.round{
+  border-radius:8px;
+  border:2px solid #cccccc;
+  padding:6px;
+  width:950px;
+}
+/*
+ * 通知コメント
+ */
+.notify{
+  font-size:72%;
+  color:red;
+}
+
+/*
+ * table系
+ */
+table#table-a{
+  //border:1px #e3e3e3 solid;
+  border:1px #a6baff solid;
+  border-spacing: 0;
+  //background: #d5f0f0;
+}
+table#table-a th{
+  padding:5px;
+  //border:#98dcdc solid;
+  border:#ffeeaa solid;
+  border-width:0 0 1px 1px;
+  //background:#73cece;
+  background:#d1e8ff;
+  font-weight:bold;
+  line-height:120%;
+  text-align:center;
+}
+table#table-a td{
+  padding:5px;
+  border-style:solid;
+  border-width:1px;
+  //border-color:#ffffff #8ed9d9 #8ed9d9 #ffffff;
+  border-color:#ffffff #ffeeaa #ffeeaa #ffffff;
+  color:#1a4444;
+}
+
+/*--------------------------------------------------------------------
+clearfix
+--------------------------------------------------------------------*/
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+.clearfix {
+  min-height: 1px;
+}
+
+* html .clearfix {
+  height: 1px;
+  /*\*//*/
+  height: auto;
+  overflow: hidden;
+  /**/
+}
+
+/*--------------------------------------------------------------------
+HTML5
+--------------------------------------------------------------------*/
+article,aside,details,footer,header,hgroup,menu,nav,section,summary {
+  display: block;
+}
+
+/*--------------------------------------------------------------------
+Wrapper
+--------------------------------------------------------------------*/
+#wrapper {
+  width: 100%;
+}
+
+/*--------------------------------------------------------------------
+Wrap-top
+--------------------------------------------------------------------*/
+
+#wrap-top {
+  width: 100%;
+  text-align: center;
+}
+
+/*
+header {
+  height: 100px;
+  background-color: #9fb7d4;
+  text-align: left;
+  margin: 0 auto;
+}
+*/
+header{
+  height: 64px;
+  text-align: left;
+  margin: 0 auto;
+  color:#fff;
+  background: -moz-linear-gradient(left, rgba(0,153,255,0.5), #009);
+  background: -webkit-gradient(linear, left top, right top,
+    from(rgba(0,153,255,0.5)),
+    to(#009));
+  background: -o-linear-gradient(left, rgba(0,153,255,0.5), #009);
+  background: linear-gradient(left, rgba(0,153,255,0.5), #009);
+}
+
+header hgroup {
+  padding: 5px;
+}
+
+header hgroup h1,
+header hgroup h2 {
+  font-size: 200%;
+  font-weight: normal;
+  margin:2px;
+  padding: 4px;
+}
+
+header nav#nav_top ul li {
+  list-style: none;
+  padding: 0 5px;
+  float: left;
+}
+
+/*web kit 用*/
+#content {
+  margin: 0 auto;
+ background: -webkit-gradient(linear, left top, right top, from(#ffffff),
+                       color-stop(0.6, #ffffff),
+                       to(#eef7ff));
+}
+/* 斜めグラデ
+#content {
+  margin: 0 auto;
+ background: -webkit-gradient(linear, left top, right bottom, from(#ffffff),
+                       color-stop(0.7, #ffffff),
+                       to(#ddddff));
+}*/
+
+/* 左サイドバー */
+/*
+#main {
+  overflow: hidden;
+  float: right;
+  width: 100%;
+  margin: 0 0 0 -180px;
+}
+
+#container {
+  position: relative;
+  text-align: left;
+  margin: 0 0 0 180px;
+}
+
+#column1 {
+  padding: 0 0 0 10px;
+}
+
+#content section h1,
+#content section h2 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+#column2 {
+  float: left;
+  width: 180px;
+  text-align: left;
+  background-color: #cccccc;
+}
+*/
+
+/*右サイドバー*/
+/*
+#main {
+  overflow: hidden;
+  float: left;
+  width: 100%;
+  margin: 0 -180px 0 0;
+}
+
+#container {
+  position: relative;
+  text-align: left;
+  margin: 0 180px 0 0;
+}
+
+#column1 {
+  padding: 0 10px;
+}
+
+#content section h1,
+#content section h2 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+#column2 {
+  float: right;
+  width: 180px;
+  text-align: left;
+  background-color: #cccccc;
+}
+*/
+#column1 {
+  padding: 0 10px;
+}
+
+/*--------------------------------------------------------------------
+Wrap-btm
+--------------------------------------------------------------------*/
+
+#wrap-btm {
+  clear: both;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+}
+
+footer {
+  height: 100px;
+  //background-color: #9fb7d4;
+  background-color: #d1e8ff;
+  text-align: left;
+  margin: 0 auto;
+}
+
+footer .copyright {
+  padding: 5px;
+}
+
+
+header,
+#content,
+footer {
+  width: 980px;
+ /*width: 100%;*/
+}
+
+
+#wrapper {
+  position: relative;
+  min-height: 100%;
+}
+
+* html #wrapper {/*IE6*/
+  height: 100%;
+}
+
+#wrap-top {
+  height: 100%;
+  padding-bottom: 100px;/*�t�b�^�[�̍�����*/
+}
+
+#content {
+  overflow: auto;
+}
+
+#wrap-btm {
+  position: absolute;
+  bottom: 0;
+}
+
+/*--------------------------------------------------------------------
+
+--------------------------------------------------------------------*/
+
+#column2 nav#nav_side ul li {
+  list-style: none;
+  padding: 0 5px;
+}
+

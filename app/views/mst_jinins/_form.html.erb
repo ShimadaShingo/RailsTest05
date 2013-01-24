@@ -1,0 +1,98 @@
+<%= form_for(@mst_jinin) do |f| %>
+  <% if @mst_jinin.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mst_jinin.errors.count, "error") %> 個の入力間違いがあります。</h2>
+
+      <ul>
+      <% @mst_jinin.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  </br>
+  <p class="round"><%= f.label :id %>：<%= f.text_field :id, :size=>10 ,:maxlength=>8, :tabindex=>1 %></p>
+  <div id="divtable">
+  	<div class="row">
+  		<div class="u1"></br>人員名称</div>
+  		<div class="u2">姓</br><%= f.text_field :name_sei ,:tabindex=>2 %></div>
+  		<div class="u2">名</br><%= f.text_field :neme_mei ,:tabindex=>3 %></div>
+  		<div class="u2">　　　　　</div>
+  		<div class="u2"></br>権限レベル　　</div>
+  		<div class="u2"></br><%= f.collection_select(:authority_id ,Authority.all,:id,:authority_name, :tabindex=>14) %></div>
+<!--  		<div class="u2"></br><%= f.select "authority_id" ,[["一般ユーザー",0],["管理者",1]], :tabindex=>14 %></div>
+-->
+  	</div>
+   	<div class="row">
+  		<div class="u1">人員名称（カナ）</div>
+  		<div class="u2"><%= f.text_field :kana_sei ,:tabindex=>4 %></div>
+  		<div class="u2"><%= f.text_field :kana_mei ,:tabindex=>5 %></div>
+  		<div class="u2"></div>
+  		<div class="u2">打刻忘れ通知</div>
+  		<div class="u2"><%= f.check_box :punchnotify ,:tabindex=>15 %>する</div>
+  	</div>
+   	<div class="row">
+  		<div class="u1"><%= f.label :contact1 %></div>
+  		<div class="u2"><%= f.text_field :contact1 ,:tabindex=>6 %></div>
+   		<div class="u2"></div>
+   		<div class="u2"></div>
+  		<div class="u2">災害エリアメール送信</div>
+  		<div class="u2"><%= f.check_box :sendareamail,:tabindex=>16 %>する</div>
+  	</div>
+   	<div class="row">
+  		<div class="u1"><%= f.label :contact2 %></div>
+  		<div class="u2"><%= f.text_field :contact2 ,:tabindex=>7 %></div>
+   		<div class="u2"></div>
+   		<div class="u2"></div>
+  		<div class="u2"></div>
+  		<div class="u2"><p class="notify">*メールアドレス1が適用されます。</p></div>
+  	</div>  	
+   	<div class="row">
+  		<div class="u1"><%= f.label :contact3 %></div>
+  		<div class="u2"><%= f.text_field :contact3 ,:tabindex=>8 %></div>
+  	</div>
+   	<div class="row">
+  		<div class="u1"><%= f.label :mailaddress1 %></div>
+  		<div class="u2"><%= f.text_field :mailaddress1 ,:tabindex=>9 %></div>
+  	</div>
+   	<div class="row">
+  		<div class="u1"><%= f.label :mailaddress2 %></div>
+  		<div class="u2"><%= f.text_field :mailaddress2 ,:tabindex=>10 %></div>
+  	</div>
+   	<div class="row">
+  		<div class="u1"><%= f.label :mailaddress3 %></div>
+  		<div class="u2"><%= f.text_field :mailaddress3 ,:tabindex=>11 %></div>
+  	</div>
+   	<div class="row">
+  		<div class="u1"><%= f.label :password %></div>
+  		<div class="u2"><%= f.password_field :password ,:value => @mst_jinin.password  ,:tabindex=>12 %></div>
+  	</div> 	
+   	<div class="row">
+  		<div class="u1"><%= f.label :password_confirmation %></div>
+  		<div class="u2"><%= password_field "mst_jinin","password_confirmation" ,:tabindex=>13 %></div>
+  	</div> 	
+</div>
+</br>
+<div id="divtable">
+   	<div class="row">
+  		<div class="u1"><%= f.label :registuser %></div>
+  		<div class="u2"><%= f.text_field :registuser %></div>
+  		<div class="u1"><%= f.label :registdate %></div>
+  		<div class="u2"><%= f.datetime_select :registdate %></div>
+  		<div class="u2">※テスト用フィールド</div>
+  	</div>
+   	<div class="row">
+  		<div class="u1"><%= f.label :updateuser %></div>
+  		<div class="u2"><%= f.text_field :updateuser %></div>
+  		<div class="u1"><%= f.label :updatedate %></div>
+  		<div class="u2"><%= f.datetime_select :updatedate %></div>
+  		<div class="u2">※テスト用フィールド</div>
+  	</div>
+</div>
+<%= f.hidden_field :lock_version %>
+  	<div class="right">
+  		<%= f.submit %>
+  	</div>
+  	  	</br></br></br></br></br></br></br></br>
+<% end %>

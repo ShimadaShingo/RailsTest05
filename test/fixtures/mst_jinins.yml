@@ -1,0 +1,43 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: MyString
+  name_sei: MyString
+  neme_mei: MyString
+  kana_sei: MyString
+  kana_mei: MyString
+  contact1: MyString
+  contact2: MyString
+  contact3: MyString
+  mailaddress1: MyString
+  mailaddress2: MyString
+  mailaddress3: MyString
+  authoritylevel: 1
+  password: MyString
+  punchnotify: false
+  sendareamail: false
+  registuser: MyString
+  registdate: 2012-11-28 23:46:15
+  updateuser: MyString
+  updatedate: 2012-11-28 23:46:15
+
+two:
+  id: MyString
+  name_sei: MyString
+  neme_mei: MyString
+  kana_sei: MyString
+  kana_mei: MyString
+  contact1: MyString
+  contact2: MyString
+  contact3: MyString
+  mailaddress1: MyString
+  mailaddress2: MyString
+  mailaddress3: MyString
+  authoritylevel: 1
+  password: MyString
+  punchnotify: false
+  sendareamail: false
+  registuser: MyString
+  registdate: 2012-11-28 23:46:15
+  updateuser: MyString
+  updatedate: 2012-11-28 23:46:15

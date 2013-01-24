@@ -1,0 +1,57 @@
+<div id="wrapper">
+<div id="warp-top">
+<header>
+<hgroup>
+<h1>XXXXXX 人員マスタ一覧</h1></ br>
+</hgroup>
+<nav id="nav_top" class="clearfix">
+<div id="divnavi">
+<%= link_to '人員の新規登録', new_mst_jinin_path %> | 
+<a href="">トップメニューへ戻る</a>
+</div>
+</header>
+
+<div id="content">
+	<div id="main">
+		<div id="container">
+			<section id="column1">
+				<section>
+					</br>
+					<table id="table-a">
+						<tr>
+							<th width="80px">人員ID</th>
+							<th width="260px">人員名称</th>
+							<th width="260px">人員名称（カナ）</th>
+							<th width="80px"></th>
+							<th width="80px"></th>
+							<th width="80px"></th>
+						</tr>
+						
+						<% @mst_jinins.each do |mst_jinin| %>
+						<tr>
+							<td align="right" ><%= mst_jinin.id %></td>
+							<td><%= mst_jinin.name_sei %>&nbsp;&nbsp;<%= mst_jinin.neme_mei %></td>
+							<td><%= mst_jinin.kana_sei %>&nbsp;&nbsp;<%= mst_jinin.kana_mei %></td>
+							<td align="center"><%= link_to '照会', mst_jinin %></td>
+    						<td align="center"><%= link_to '編集', edit_mst_jinin_path(mst_jinin) %></td>
+    						<td align="center"><%= link_to '削除', mst_jinin, method: :delete, data: { confirm: '削除します。よろしいですか？' } %></td>
+						</tr>
+						<% end %>
+					</table>
+ 				</section>
+<!--#column1--></section>
+<!--#container--></div>
+
+<!--#content--></div>
+						
+<!--#warp-top--></div>
+
+<div id="wrap-btm">
+	<footer>
+		<div class="copyright">&copy;2012 Angle. - Ruby on Rails Demonstration -<!--.copyright--></div>
+	</footer>
+<!--#wrap-btm--></div>
+<!--wrapper--></div>
+<br />
+
+

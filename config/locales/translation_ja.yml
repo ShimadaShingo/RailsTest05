@@ -1,0 +1,27 @@
+ja:
+  activerecord:
+    models:
+      mst_jinin: mst_jinin  #g
+
+    attributes:
+      mst_jinin:
+        id: 人員ID #g
+        authoritylevel: 権限  #g
+        contact1: 連絡先1  #g
+        contact2: 連絡先2  #g
+        contact3: 連絡先3  #g
+        kana_mei: カナ名  #g
+        kana_sei: カナ姓  #g
+        mailaddress1: メールアドレス1  #g
+        mailaddress2: メールアドレス2  #g
+        mailaddress3: メールアドレス3  #g
+        name_sei: 漢字姓  #g
+        neme_mei: 漢字名  #g
+        password: パスワード #g
+        punchnotify: 打刻通知をする  #g
+        registdate: 登録日  #g
+        registuser: 登録者  #g
+        sendareamail: エリアメール送信をする  #g
+        updatedate: 更新日  #g
+        updateuser: 更新者  #g
+        password_confirmation: パスワード（確認用）  #g
