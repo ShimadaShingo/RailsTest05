@@ -90,9 +90,6 @@ class MstJininsController < ApplicationController
  end
 
 
-#
-
-
 
 
 
