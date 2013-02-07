@@ -90,8 +90,13 @@ class MstJininsController < ApplicationController
  end
 
 
+<<<<<<< HEAD
 ###
 
+=======
+
+## remort
+>>>>>>> 7461ac340463e4a72aeb88ad81ba49dc316fa4ce
 
 
 
